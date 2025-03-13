@@ -151,4 +151,9 @@ class AwesomeStatusBarApp(rumps.App):
             )
 
 if __name__ == "__main__":
-    AwesomeStatusBarApp("👀").run()
+    app = AwesomeStatusBarApp("🎩", "Alfred Pennyworth")
+    # Set custom icon
+    icon_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static/alfred_icon_menu.png")
+    if os.path.exists(icon_path):
+        app.icon = icon_path
+    app.run()
